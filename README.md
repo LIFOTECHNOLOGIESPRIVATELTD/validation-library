@@ -73,4 +73,7 @@ obj.validateForm(validations,function(response){
 - alphabet-only
 
 
+# **Demo link is available**
+
+https://demolinc.com/validation/
 
