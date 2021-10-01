@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validations</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<style type="text/css">
+		.asteriskField{color: #FF0000;margin-left: 5px;}
+	</style>
+</head>
+<body>
+
+<div class="container">    
+            
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Sign Up</div>
+            </div>  
+            <div class="panel-body" >
+                <form method="post" action="" id="validateForm">
+                    <form  class="form-horizontal" method="post" >
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                       
+                        <div id="div_id_As" class="form-group required">
+                            <label for="id_As"  class="control-label col-md-4  requiredField">As<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "  style="margin-bottom: 10px">
+                                <label class="radio-inline"> <input type="radio" name="As" id="id_As_1" value="I"  style="margin-bottom: 10px">Individual </label>
+                                <label class="radio-inline"> <input type="radio" name="As" id="id_As_2" value="CI"  style="margin-bottom: 10px">Company/Institute </label>
+                            </div>
+                        </div>
+                        <div id="div_id_username" class="form-group required">
+                            <label for="id_username" class="control-label col-md-4  requiredField"> Username<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control alphabet-only" id="id_username" maxlength="30" name="username" placeholder="Enter your username" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_email" class="form-group required">
+                            <label for="id_email" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Enter your email address" style="margin-bottom: 10px" type="email" />
+                            </div>     
+                        </div>
+                        <div id="div_id_password1" class="form-group required">
+                            <label for="id_password1" class="control-label col-md-4  requiredField">Password<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_password1" name="password1" placeholder="Create a password" style="margin-bottom: 10px" type="password" />
+                            </div>
+                        </div>
+                        <div id="div_id_password2" class="form-group required">
+                             <label for="id_password2" class="control-label col-md-4  requiredField"> Confirm password<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_password2" name="password2" placeholder="Confirm your password" style="margin-bottom: 10px" type="password" />
+                            </div>
+                        </div>
+                        <div id="div_id_name" class="form-group required"> 
+                            <label for="id_name" class="control-label col-md-4  requiredField"> full name<span class="asteriskField">*</span> </label> 
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_name" name="name" placeholder="Your Frist name and Last name" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_gender" class="form-group required">
+                            <label for="id_gender"  class="control-label col-md-4  requiredField"> Gender<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "  style="margin-bottom: 10px">
+                                 <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="M"  style="margin-bottom: 10px">Male</label>
+                                 <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="F"  style="margin-bottom: 10px">Female </label>
+                            </div>
+                        </div>
+                        
+                        <div id="div_id_number" class="form-group required">
+                             <label for="id_number" class="control-label col-md-4  requiredField"> contact number<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                 <input class="input-md textinput textInput form-control" id="id_number" name="number" placeholder="provide your number" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div> 
+                        <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> Your Location<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <select class="form-control" name="location" id="id_location">
+                                	<option value="">Select location</option>
+                                	<option value="Chennai">Chennai</option>
+                                	<option value="Salem">Salem</option>
+                                	<option value="Coimbatore">Coimbatore</option>
+                                </select>
+                            </div> 
+                        </div>
+                        <div id="div_id_education" class="form-group required">
+                            <label for="id_education"  class="control-label col-md-4  requiredField"> Education<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "  style="margin-bottom: 10px">
+                                 <label class="radio-inline"> <input type="checkbox" name="education[]" id="id_education_1" value="Diploma"  style="margin-bottom: 10px">Diploma</label>
+                                 <label class="radio-inline"> <input type="checkbox" name="education[]" id="id_education_2" value="Under Graduate"  style="margin-bottom: 10px">Under Graduate </label>
+                                 <label class="radio-inline"> <input type="checkbox" name="education[]" id="id_education_2" value="Post Graduate"  style="margin-bottom: 10px">Post Graduate </label>
+                            </div>
+                        </div>
+                        <div id="div_id_about" class="form-group required">
+                             <label for="id_about" class="control-label col-md-4  requiredField"> About You<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                 <textarea class="form-control" id="id_about" name="about" placeholder="About yourself" style="margin-bottom: 10px"></textarea>
+                            </div> 
+                        </div>
+                        <div id="div_id_profile" class="form-group required">
+                             <label for="id_profile" class="control-label col-md-4  requiredField"> Profile Picture<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                 <input type="file" name="profile" id="id_profile" value="" />
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <div class="controls col-md-offset-4 col-md-8 ">
+                                <div id="div_id_terms" class="checkbox required">
+                                    <label for="id_terms" class=" requiredField">
+                                         <input class="input-ms checkboxinput" id="id_terms" name="terms" style="margin-bottom: 10px" type="checkbox" />
+                                         Agree with the terms and conditions
+                                    </label>
+                                </div> 
+                                    
+                            </div>
+                        </div> 
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="button" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                            </div>
+                        </div> 
+                            
+                    </form>
+
+                </form>
+            </div>
+        </div>
+    </div> 
+</div>
+    
+
+
+
+
+
+</div>  
+<script type="text/javascript" src="validations.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var obj=new formValidations();
+
+	$(document).on('click','input[type="button"]',function(e){
+		var validations={
+			formID:'validateForm',
+			fields: {
+			    As: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Select user type'
+			            }
+			        }
+			    },
+			    username: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Enter user name'
+			            }
+			        }
+			    },
+			    email: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Enter your email address'
+			            },
+			            emailAddress: {
+	                        message: 'The input is not a valid email address'
+	                    }
+			        }
+			    },
+			    password1: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Enter password'
+			            },
+			            strLen:{
+			            	min:5,
+			            	max:10,
+			            	message:'The password must have 5 to 10 characters'
+			            },
+			            strength:{
+			            	severity:'medium',
+			            	message:'Minimum one alphabet and one number.'
+			            	/*severity:'high',
+			            	message:'Minimum one upper case, one lower case, one number.'*/
+			            	/*severity:'strict',
+			            	message:'Minimum one upper case, one lower case, one number and one special character.'*/
+			            }
+			        }
+			    },
+			    password2: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Enter confirm password'
+			            },
+			            strLen:{
+			            	min:5,
+			            	max:10,
+			            	message:'The password must have 5 to 10 characters'
+			            },
+			            compare:{
+			            	input:'password1',
+			            	message:'Password should be same as confirm password'
+			            }
+
+			        }
+			    },
+			    name: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Enter full name'
+			            }
+			        }
+			    },
+			    gender: {
+			        validators: {
+			            notEmpty: {
+			                message: 'Select gender'
+			            }
+			        }
+			    },
+			    number:{
+			    	validators: {
+			            notEmpty: {
+			                message: 'Enter contact number'
+			            },
+			            numberOnly:{
+			            	message:'Enter number only'
+			            }
+
+			        }
+			    },
+			    location:{
+			    	validators: {
+			            notEmpty: {
+			                message: 'Select your location'
+			            }
+			        }
+			    },
+			    'education[]': {
+			        validators: {
+			            notEmpty: {
+			                message: 'Select education'
+			            }
+			        }
+			    },
+			    about:{
+			    	validators: {
+			            notEmpty: {
+			                message: 'Enter about yourself'
+			            },
+			            strLen:{
+			            	max:10,
+			            	message:'Characters should not exceed more than 10'
+			            }
+			        }
+			    },
+			    profile:{
+			    	validators: {
+			            notEmpty: {
+			                message: 'Select your profile picture'
+			            },
+			            fileSize:{
+			            	max:1000000,
+			            	message:'File size should be less than 1 mb'
+			            },
+			            extensions:{
+			            	allowed:['jpg','jpeg','png','gif','bmp'],
+			            	message:'Only images are allowed'	
+			            },
+			            resolutions:{
+			            	width:645,
+			            	height:645,
+			            	message:'Image resoultion should be 645 and 645'
+			            }
+			        }
+			    },
+			    terms:{
+			    	validators: {
+			            notEmpty: {
+			                message: 'Agree the terms and conditions'
+			            }
+			        }
+			    }
+			}
+		};
+		obj.validateForm(validations,function(response){
+			if(response.status=='error')
+			{
+				console.log(response);
+				alert(response.message);
+			}
+			else
+			{
+				
+			}
+		});
+		return false;
+	});
+</script>
+</body>
+
+</html>
