@@ -298,5 +298,5 @@ $(document).on('keypress','input.numeric-only',function(e){
 
 /* Alphabet only */
 $(document).on('keypress','input.alphabet-only',function(e){ 
-	if (!(e.which > 31 && (e.which < 65 || e.which > 90) && (e.which < 97 || e.which > 122))) return false;
+	if ((e.which > 31 && (e.which < 65 || e.which > 90) && (e.which < 97 || e.which > 122))) return false;
 });
