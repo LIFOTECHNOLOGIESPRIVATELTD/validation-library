@@ -1,0 +1,263 @@
+package Sel;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class orange
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		
+		System.setProperty("webdriver.chrome.driver", "E:\\Testing\\Selenium\\chromedriver_win32\\new2021\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demolinc.com/validation/");
+		//driver.navigate().to("https://demolinc.com/validation/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+			//Validating alert 
+		driver.findElement(By.id("submit-id-signup")).click();
+		     Alert alt=driver.switchTo().alert();
+		     String alertText=alt.getText();
+		     System.out.println("Alert message :"+ alertText);
+		     alt.accept();
+		
+		     //Radiobutton 
+		System.out.println("As* Radio Button");
+		WebElement schbtn=	driver.findElement(By.id("id_As_1"));
+     	boolean btn =	schbtn.isSelected();
+    	System.out.println("Individual Radio Button is selected  :"+ btn);
+	
+	    schbtn.click();
+	    boolean btn1=schbtn.isSelected();
+	    System.out.println("Individual Radio Button is selected  :"+ btn1);
+	
+	    WebElement schbtn1=	driver.findElement(By.id("id_As_2"));
+     	boolean btn2 =	schbtn1.isSelected();
+    	System.out.println("Company/Institute  Radio Button is selected  :"+ btn);
+	
+	    schbtn1.click();
+	    boolean btn3=schbtn1.isSelected();
+	    System.out.println("Company/Institute  Radio Button is selected  :"+ btn1);
+	    Thread.sleep(1000);
+	  
+	    //UserName Alert
+	     driver.findElement(By.id("submit-id-signup")).click();
+	     	Alert alt1=driver.switchTo().alert();
+	     	String alertText1=alt1.getText();
+	     	System.out.println("Alert message :"+ alertText1);
+	     	alt.accept();
+	  
+	     	//Entering username 
+	     driver.findElement(By.id("id_username")).sendKeys("Admin");
+	     Thread.sleep(1000);
+	   
+	     //Email Alert
+	     driver.findElement(By.id("submit-id-signup")).click();
+	     	Alert alt2=driver.switchTo().alert();
+	     	String alertText2=alt2.getText();
+	     	System.out.println("Alert message :"+ alertText2);
+	     	alt.accept();
+	   
+	     	//Entering Invalid Email
+	     	driver.findElement(By.id("id_email")).sendKeys("Admin");
+	     	
+	     	driver.findElement(By.id("submit-id-signup")).click();
+		     	Alert alt9=driver.switchTo().alert();
+		     	String alertText9=alt9.getText();
+		     	System.out.println("Alert message :"+ alertText9);
+		     	alt.accept();
+	     	 Thread.sleep(1000);
+	     	
+	     	 //Entering Valid Email	 
+	     	driver.findElement(By.id("id_email")).clear();
+	     driver.findElement(By.id("id_email")).sendKeys("Admin@gmail.com");
+	    
+	   //Password Alert
+	     driver.findElement(By.id("submit-id-signup")).click();
+	     	Alert alt3=driver.switchTo().alert();
+	     	String alertText3=alt3.getText();
+	     	System.out.println("Alert message :"+ alertText3);
+	     	alt.accept();
+	 
+	     	//Entering Password
+	     driver.findElement(By.id("id_password1")).sendKeys("qwerty123");
+	     Thread.sleep(1000);
+	     
+		   //Confirm Password Alert
+	     driver.findElement(By.id("submit-id-signup")).click();
+	     	Alert alt4=driver.switchTo().alert();
+	     	String alertText4=alt4.getText();
+	     	System.out.println("Alert message :"+ alertText4);
+	     	alt.accept();
+	 
+	     	//Entering wrong Confirm Password
+	     driver.findElement(By.id("id_password2")).sendKeys("qwerty12");
+	     Thread.sleep(1000);
+	    
+	     //Passwords Not match
+	     driver.findElement(By.id("submit-id-signup")).click();
+	     	Alert alt5=driver.switchTo().alert();
+	     	String alertText5=alt5.getText();
+	     	System.out.println("Alert message :"+ alertText5);
+	     	alt.accept();
+	     	//Entering correct Confirm Password
+	     	driver.findElement(By.id("id_password2")).clear();
+	     	 Thread.sleep(1000);
+		     driver.findElement(By.id("id_password2")).sendKeys("qwerty123");
+		    
+	     //FullName Alert
+		     driver.findElement(By.id("submit-id-signup")).click();
+		     	Alert alt6=driver.switchTo().alert();
+		     	String alertText6=alt6.getText();
+		     	System.out.println("Alert message :"+ alertText6);
+		     	alt.accept();
+		     	
+		     	//Entering FullName
+		     	driver.findElement(By.id("id_name")).sendKeys("Admin");
+		     	
+		     	//Gender alert 
+				driver.findElement(By.id("submit-id-signup")).click();
+				     Alert alt7=driver.switchTo().alert();
+				     String alertText7=alt7.getText();
+				     System.out.println("Alert message :"+ alertText7);
+				     alt.accept();
+				
+				//Gender* Radiobutton 
+				System.out.println("Gender* Radio Button");
+				WebElement schbtn2=	driver.findElement(By.id("id_gender_1"));
+		     	boolean btn4 =	schbtn2.isSelected();
+		    	System.out.println("Gender Male is selected  :"+ btn4);
+			
+			    schbtn2.click();
+			    boolean btn5=schbtn2.isSelected();
+			    System.out.println("Gender Male is selected  :"+ btn5);
+			
+			    WebElement schbtn3=	driver.findElement(By.id("id_gender_2"));
+		     	boolean btn6 =	schbtn3.isSelected();
+		    	System.out.println("Gender Female is selected  :"+ btn6);
+			
+			    schbtn3.click();
+			    boolean btn7=schbtn3.isSelected();
+			    System.out.println("Gender Female is selected  :"+ btn7);
+			    Thread.sleep(2000);
+				     	
+			    //Contact alert
+			    driver.findElement(By.id("submit-id-signup")).click();
+			     Alert alt8=driver.switchTo().alert();
+			     String alertText8=alt8.getText();
+			     System.out.println("Alert message :"+ alertText8);
+			     alt.accept();
+			     
+			     //Entering Invalid contact
+			     driver.findElement(By.id("id_number")).sendKeys("Admin");
+			     driver.findElement(By.id("submit-id-signup")).click();
+			     Alert alt10=driver.switchTo().alert();
+			     String alertText10=alt10.getText();
+			     System.out.println("Alert message :"+ alertText10);
+			     alt.accept();
+			 
+			     //Entering Alphabet in contact
+			     driver.findElement(By.id("id_number")).clear();
+			     
+			     //Entering valid Contact
+			     driver.findElement(By.id("id_number")).sendKeys("9876543210");
+			     driver.findElement(By.id("submit-id-signup")).click();
+			     Alert alt11=driver.switchTo().alert();
+			     String alertText11=alt11.getText();
+			     System.out.println("Alert message :"+ alertText11);
+			     alt.accept();
+			  
+			     //Select Location
+			     WebElement DD=driver.findElement(By.xpath("//select[@id='id_location']"));	
+					Select sel=new Select(DD);
+					sel.selectByVisibleText("Chennai");
+					
+					//Education
+					   driver.findElement(By.id("submit-id-signup")).click();
+					     Alert alt12=driver.switchTo().alert();
+					     String alertText12=alt12.getText();
+					     System.out.println("Alert message :"+ alertText12);
+					     alt.accept();
+					   
+					     // Education radio button
+					     System.out.println("Gender* Radio Button");
+							WebElement schbtn4=	driver.findElement(By.id("id_education_1"));
+					     	boolean btn8 =	schbtn4.isSelected();
+					    	System.out.println("Diploma is selected  :"+ btn8);
+						
+						    schbtn4.click();
+						    boolean btn9=schbtn4.isSelected();
+						    System.out.println("Diploma is selected  :"+ btn9);
+						
+						    WebElement schbtn5=	driver.findElement(By.id("id_education_2"));
+					     	boolean btn10 =	schbtn5.isSelected();
+					    	System.out.println("Under Graduate is selected  :"+ btn10);
+						
+						    schbtn5.click();
+						    boolean btn11=schbtn5.isSelected();
+						    System.out.println("Under Graduate is selected  :"+ btn11);
+						    Thread.sleep(2000);
+						    
+						    //*[@id="id_education_2"]
+						    //html/body/div/div/div/div[2]/form/div[10]/div/label[3]/input
+						 
+						    WebElement schbtn6=  driver.findElement(By.xpath("html/body/div/div/div/div[2]/form/div[10]/div/label[3]/input"));
+						    //schbtn6.click();
+						    boolean btn12 =	schbtn6.isSelected();
+					    	System.out.println("Post Graduate is selected  :"+ btn12);
+						
+						    schbtn6.click();
+						    boolean btn13=schbtn6.isSelected();
+						    System.out.println("Post Graduate is selected  :"+ btn13);
+						    Thread.sleep(2000);
+			  
+						    //About you Alert
+						    driver.findElement(By.id("submit-id-signup")).click();
+						     Alert alt13=driver.switchTo().alert();
+						     String alertText13=alt13.getText();
+						     System.out.println("Alert message :"+ alertText13);
+						     alt.accept();
+						     
+						     //Enterig About
+						     driver.findElement(By.id("id_about")).sendKeys("Validation Library");
+						     
+						     //alert
+						     driver.findElement(By.id("submit-id-signup")).click();
+						     Alert alt14=driver.switchTo().alert();
+						     String alertText14=alt14.getText();
+						     System.out.println("Alert message :"+ alertText14);
+						     alt.accept();
+						    
+						     driver.findElement(By.id("id_about")).clear();
+						     driver.findElement(By.id("id_about")).sendKeys("Validation");
+			 
+						     //Upload File
+						     WebElement browse = driver.findElement(By.xpath("//input[@id='id_profile']"));
+
+						     //click on ‘Choose file’ to upload the desired file
+						     browse.sendKeys("C:\\Users\\Dinesh RD\\Downloads\\test.jpg"); //Uploading the file using sendKeys
+						     System.out.println("File is Uploaded Successfully");
+					
+						     //alert terms and conditions
+						     driver.findElement(By.id("submit-id-signup")).click();
+						     Alert alt15=driver.switchTo().alert();
+						     String alertText15=alt15.getText();
+						     System.out.println("Alert message :"+ alertText15);
+						     alt.accept();
+						     
+						     //agree terms and conditions						    
+						     driver.findElement(By.id(" id_terms")).click();
+	
+						     
+	}
+	}		     
+			     
+	
